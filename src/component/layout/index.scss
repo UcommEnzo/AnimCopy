@@ -1,0 +1,140 @@
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  padding: 8px 8px 0px 8px;
+  background-color: #d3d3d3;
+
+  .bodyContainer {
+    display: flex;
+    max-width: 880px;
+    min-height: calc(100vh - 100px); //-142
+    
+    .mainContainer {
+      display: flex;
+      flex-direction: column;
+      margin-right: 8px;
+
+      .navBar {
+        
+        nav {
+          display: flex;
+          justify-content: center;
+          height: 50px;
+          
+          a {
+            text-decoration: none;
+            text-align: center;
+            padding: 14px;
+            color: white;
+            font-size: 12.02pt;
+  
+            &:nth-child(1) {
+              background-color: #b32121;
+              border-top-left-radius: 4px;
+              border-bottom-left-radius: 4px;
+            }
+            &:nth-child(2) {
+              background-color: #a01e1e;
+            }
+            &:nth-child(3) {
+              background-color: #881919;
+            }
+            &:nth-child(4) {
+              background-color: #731515;
+            }
+            &:nth-child(5) {
+              background-color: #641212;
+            }
+            &:nth-child(6) {
+              background-color: #560f0f;
+            }
+            &:nth-child(7) {
+              background-color: #460c0c;
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
+            }
+            &:hover {
+              background-color: #cf2525;
+            }
+          }
+        }
+      }
+
+      .donate {
+        margin-top: 8px;
+      }
+    
+      .contentContainer {
+        border-radius: 4px;
+        margin-top: 8px;
+      }
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 280px;
+      background-color: #383838;
+      border-radius: 4px;
+      padding: 10px;
+      height: 1943px;
+
+      .searchBlock {
+        width: 100%;
+
+        .searchDropDown {
+          background-color: #383838;
+          position: relative;
+          z-index: 3;
+
+          .titleLink {
+            display: block;
+            padding: 6px 6px;
+            text-decoration: none;
+            color: #dddddd;
+            font-size: 12pt;
+          }:hover {
+            background-color: #460c0c
+          }
+        }
+      }
+      .sidebarTitles {
+        position: absolute;
+        top: 60px;
+        z-index: 2;
+      }
+    }
+  }
+
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #383838;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 2px 6px;
+    margin-top: 10px;
+
+    .footerRight {
+
+      a {
+        text-decoration: none;
+        color: #ddd;
+        padding-right: 6px;
+        border-right: solid 2px #ddd;
+        padding-left: 6px;
+
+        &:nth-child(1) {
+          padding-left: 0px;
+        }
+        &:nth-child(5) {
+          padding-right: 0px;
+          border-right: none;
+        }
+      }
+    }
+  }
+}

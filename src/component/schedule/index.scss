@@ -1,0 +1,39 @@
+.scheduleContainer {
+  background-color: #FFF;
+  padding: 10px 20px;
+  border-radius: 4px;
+
+  .scheduleHeader {
+
+    p {
+      text-align: center;
+      margin: 0px;
+      font-size: 13pt;
+
+      &:nth-child(2) {
+        font-size: 11pt;
+        font-style: italic;
+      }
+    }
+  }
+
+  .dayContainer {
+    display: flex;
+    flex-direction: column;
+
+    .dayHeader {
+      text-align: center;
+      background-color: #4a4a4a;
+      margin: 10px 0px 20px 0px;
+      color: #FFF;
+      padding: 6px 0px;
+      border-radius: 3px;
+    }
+
+    .dayBody {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+}

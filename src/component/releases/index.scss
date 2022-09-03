@@ -1,0 +1,99 @@
+.releasesContaier {
+
+  .filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #3e3e3e;
+    padding: 25px;
+    border-radius: 4px;
+
+    .genresSelect {
+      flex: 0 1 50%;
+    }
+    .yearsSelect {
+      flex: 0 1 24%;
+    }
+    .seasonsSelect {
+      flex: 0 1 24%;
+    }
+
+    .btn {
+      display: flex;
+      margin-top: 20px;
+
+      &.switch {
+        flex: 0 1 14%;
+
+        .switcher {
+          width: 100%;
+          border-radius: 4px;
+          min-height: 32px;
+
+          .ant-switch-handle {
+            min-height: 28px;
+            box-shadow: 0 2px 4px 0 rgb(0 35 11 / 40%);
+
+            &::before {
+              border-radius: 4px;
+            }
+          }
+        }
+        .ant-switch {
+          background-color: #d4d4d4;
+          background-image: none;
+
+          .ant-switch-inner{
+            color: #000;
+            font-size: 14px;
+          }
+        }
+        .ant-switch-checked {
+          background-color: #FFF;
+          background-image: none;
+        }
+      }
+
+      &.show {
+        flex: 0 1 15%;
+        justify-content: center;
+      }
+      &.catalogFinish {
+        flex: 0 1 19%;
+      }
+
+      &.alphabet {
+        flex: 0 1 49%;
+        align-self: center;
+        justify-content: flex-end;
+        color: #FFF;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .titleWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+
+    .preloader {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      
+      .ant-spin{
+        .ant-spin-dot-item {
+          background-color: #3e3e3e;
+        }
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

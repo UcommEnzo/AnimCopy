@@ -1,0 +1,31 @@
+.mainPageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d3d3d3;
+
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 49%;
+    min-height: 245px;
+    margin-bottom: 4px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:nth-child(2n+1) {
+      padding-right: 8px;
+    }
+
+    img {
+      border-radius: 4px;
+      object-fit: cover;
+      object-position: center;
+      width: 436px;
+      height: 244px;
+    }
+  }
+}
