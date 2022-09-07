@@ -46,7 +46,7 @@ const TitleCard = ({title, cardType = ''}: PropsType) => {
       cardNames.descrClassName = 'titleDescription releases'
       break;
     default:
-      cardNames.cardClassName = 'titleCard'
+      cardNames.cardClassName = 'titleCard schedule'
       cardNames.imageClassName = 'titleImage'
       cardNames.descrClassName = 'titleDescription'
       break;

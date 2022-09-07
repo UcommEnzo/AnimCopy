@@ -24,11 +24,17 @@ const Footer = ({}) => {
         <img src={footer}/>
       </div>
       <div className="footerRight">
-        <Link to="/login" >Правила</Link>
-        <a href="tg://resolve?domain=Libria911Bot">Вопрос</a>
-        <Link to="/login">Личный Кабинет</Link>
-        <Link to="/login">Регистрация</Link>
-        <Link to="/login">Вход</Link>
+        <div className="footerButtons">
+          <Link to="/login" >Правила</Link>
+          <a href="tg://resolve?domain=Libria911Bot">Вопрос</a>
+          <Link to="/login">Личный Кабинет</Link>
+          <Link to="/login">Регистрация</Link>
+          <Link to="/login">Вход</Link>
+        </div>
+        <div className="footerDescription">
+          Весь материал на сайте представлен исключительно для домашнего ознакомительного просмотра.
+          В случаях нарушения авторских прав - обращайтесь на почту AniTest@proton.me
+        </div>
       </div>
     </div>
   )
