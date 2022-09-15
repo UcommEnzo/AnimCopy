@@ -11,7 +11,7 @@ import {
   // @ts-ignore
 } from './ActionCreators.ts';
 
-interface SearchState {
+export interface SearchState {
   fetchingYears: boolean
   fetchingGenres: boolean
   fetchingSearchTitles: boolean

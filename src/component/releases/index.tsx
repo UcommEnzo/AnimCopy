@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useLayoutEffect } from 'react';
 import type { PaginationProps } from 'antd';
-import { Pagination, Space, Spin } from 'antd';
+import { Pagination, Spin } from 'antd';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { TitleType } from '../../models/ITitlePayload';
-import { getGenres, getYears, searchTitles, advancedSearchTitles } from '../../redux/reducers/ActionCreators';
+import { getGenres, getYears, advancedSearchTitles } from '../../redux/reducers/ActionCreators';
 import Filter from './filter';
 import './index.scss';
 import TitleCard from '../common/titleCard'
-import { configureStore } from '@reduxjs/toolkit';
 
+const itemRender: PaginationProps['itemRender'] = (_, type, originalElement) => {
+  if (type === 'prev') {
+    return <a>Сюда</a>;
+  }
+  if (type === 'next') {
+    return <a>Туда</a>;
+  }
+  return originalElement;
+};
 
 const Releases = ({ }) => {
 
@@ -33,9 +41,9 @@ const Releases = ({ }) => {
       ? sortedTitles.length
       : advancedTitles.length
 
-  const toggleNewOrPop = () => {
+  const toggleNewOrPop = useCallback(() => {
     setIsSortingByNew(!isSortingByNew)
-  }
+  }, [isSortingByNew])
 
   const onPageChange = (pageNumber: number) => {
     setPageNumber(pageNumber)
@@ -67,7 +75,7 @@ const Releases = ({ }) => {
       ? sortedTitles
       : advancedTitles
     const pageNumberTitles = titlesArray.slice(start, end)
-    setTitles(pageNumberTitles)
+    titlesArray.length && setTitles(pageNumberTitles)
   }, [pageNumber, advancedTitles, sortedTitles])
 
   const filterReleseEnded = () => {
@@ -79,7 +87,7 @@ const Releases = ({ }) => {
   }
 
   const filterTitles = () => {
-    setPageNumber(1)
+    pageNumber != 1 && setPageNumber(1)
     const titlesForFilter = isReleaseEnded ? filterReleseEnded() : advancedTitles
     const titles: Array<TitleType> = titlesForFilter.filter(title => {
       const titleYear = title.season.year?.toString()
@@ -108,16 +116,6 @@ const Releases = ({ }) => {
     })
     setSortedTitles(titles)
   }
-
-  const itemRender: PaginationProps['itemRender'] = (_, type, originalElement) => {
-    if (type === 'prev') {
-      return <a>Сюда</a>;
-    }
-    if (type === 'next') {
-      return <a>Туда</a>;
-    }
-    return originalElement;
-  };
 
 
   return (

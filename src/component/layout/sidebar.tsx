@@ -1,27 +1,15 @@
-import React, { useState, useEffect, useCallback, useRef } from "react"
+import React, { useState, useEffect } from "react"
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import _ from 'lodash'
 import { TitleType } from "../../models/ITitlePayload"
 import TitleCard from "../common/titleCard"
-import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import useDebounce from "../../hooks/other";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { searchTitles } from "../../api";
 
 type PropsType = {
   sidebarTitles: Array<TitleType>
-}
-
-const searchTitles = async (searchValue: string) => {
-  try {
-    const { data: responce } = await axios.get(
-      `https://api.anilibria.tv/v2/searchTitles?search=${searchValue}&limit=12&filter=id,names,code`
-    )
-    return responce
-  } catch (e) {
-    console.log(e.message)
-  }
 }
 
 const Sidebar = ({ sidebarTitles }: PropsType) => {

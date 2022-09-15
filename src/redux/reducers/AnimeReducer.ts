@@ -10,21 +10,20 @@ import {
   // @ts-ignore
 } from './ActionCreators.ts';
 import { ScheduleType } from "../../models/ISchedulePayload";
-//import { AuthState } from "../../../models/IAuth";
 
-interface AnimeState {
-  fetchingTitle: boolean
-  fetchingRandomAnime: boolean
+export interface AnimeState {
+  //fetchingTitle: boolean
+  //fetchingRandomAnime: boolean
   fetchingGetMainPage: boolean
   fetchingGetSchedule: boolean
   fetchingGetTeam: boolean
-  getTitleError: string
-  getRandomAnimeError: string
+  //getTitleError: string
+  //getRandomAnimeError: string
   getMainPageError: string
   getScheduleError: string
   getTeamError: string
-  title: TitleType
-  titleData: TitleType
+  //title: TitleType
+  //titleData: TitleType
   mainPageData: Array<YouTubeType> | null
   scheduleData: Array<ScheduleType> | null
   teamData: any
@@ -32,159 +31,159 @@ interface AnimeState {
 
 const initialState: AnimeState = {
 
-  fetchingTitle: false,
-  getTitleError: '',
-  title: {
-    announce: '',
-    blocked: {
-      bakanim: false,
-      blocked: false
-    },
-    code: '',
-    description: '',
-    genres: [],
-    id: null,
-    in_favorites: null,
-    last_change: null,
-    names: {
-      alternative: '',
-      en: '',
-      ru: ''
-    },
-    player: {
-      alternative_player: '',
-      host: '',
-      playlist: null,
-      series: {
-        first: null,
-        last: null,
-        string: ''
-      }
-    },
-    posters: {
-      medium: {
-        raw_base64_file: '',
-        url: '',
-      },
-      original: {
-        raw_base64_file: '',
-        url: '',
-      },
-      small: {
-        raw_base64_file: '',
-        url: '',
-      }
-    },
-    season: {
-      code: null,
-      string: '',
-      week_day: null,
-      year: null,
-    },
-    status: {
-      code: null,
-      string: ''
-    },
-    team: {
-      decor: [],
-      editing: [],
-      timing: [],
-      translator: [],
-      voice: [],
-    },
-    torrents: {
-      list: [],
-      series: {
-        first: null,
-        last: null,
-        string: ''
-      }
-    },
-    type: {
-      code: null,
-      full_string: '',
-      length: null,
-      series: null,
-      string: ''
-      }
-  },
+  // fetchingTitle: false,
+  // getTitleError: '',
+  // title: {
+  //   announce: '',
+  //   blocked: {
+  //     bakanim: false,
+  //     blocked: false
+  //   },
+  //   code: '',
+  //   description: '',
+  //   genres: [],
+  //   id: null,
+  //   in_favorites: null,
+  //   last_change: null,
+  //   names: {
+  //     alternative: '',
+  //     en: '',
+  //     ru: ''
+  //   },
+  //   player: {
+  //     alternative_player: '',
+  //     host: '',
+  //     playlist: null,
+  //     series: {
+  //       first: null,
+  //       last: null,
+  //       string: ''
+  //     }
+  //   },
+  //   posters: {
+  //     medium: {
+  //       raw_base64_file: '',
+  //       url: '',
+  //     },
+  //     original: {
+  //       raw_base64_file: '',
+  //       url: '',
+  //     },
+  //     small: {
+  //       raw_base64_file: '',
+  //       url: '',
+  //     }
+  //   },
+  //   season: {
+  //     code: null,
+  //     string: '',
+  //     week_day: null,
+  //     year: null,
+  //   },
+  //   status: {
+  //     code: null,
+  //     string: ''
+  //   },
+  //   team: {
+  //     decor: [],
+  //     editing: [],
+  //     timing: [],
+  //     translator: [],
+  //     voice: [],
+  //   },
+  //   torrents: {
+  //     list: [],
+  //     series: {
+  //       first: null,
+  //       last: null,
+  //       string: ''
+  //     }
+  //   },
+  //   type: {
+  //     code: null,
+  //     full_string: '',
+  //     length: null,
+  //     series: null,
+  //     string: ''
+  //     }
+  // },
   
-  fetchingRandomAnime: false,
-  getRandomAnimeError: '',
-  titleData: {
-    announce: '',
-    blocked: {
-      bakanim: false,
-      blocked: false
-    },
-    code: '',
-    description: '',
-    genres: [],
-    id: null,
-    in_favorites: null,
-    last_change: null,
-    names: {
-      alternative: '',
-      en: '',
-      ru: ''
-    },
-    player: {
-      alternative_player: '',
-      host: '',
-      playlist: null,
-      series: {
-        first: null,
-        last: null,
-        string: ''
-      }
-    },
-    posters: {
-      medium: {
-        raw_base64_file: '',
-        url: '',
-      },
-      original: {
-        raw_base64_file: '',
-        url: '',
-      },
-      small: {
-        raw_base64_file: '',
-        url: '',
-      }
-    },
-    season: {
-      code: null,
-      string: '',
-      week_day: null,
-      year: null,
-    },
-    status: {
-      code: null,
-      string: ''
-    },
-    team: {
-      decor: [],
-      editing: [],
-      timing: [],
-      translator: [],
-      voice: [],
-    },
-    torrents: {
-      list: [],
-      series: {
-        first: null,
-        last: null,
-        string: ''
-      }
-    },
-    type: {
-      code: null,
-      full_string: '',
-      length: null,
-      series: null,
-      string: ''
-      }
-  },
+  // fetchingRandomAnime: false,
+  // getRandomAnimeError: '',
+  // titleData: {
+  //   announce: '',
+  //   blocked: {
+  //     bakanim: false,
+  //     blocked: false
+  //   },
+  //   code: '',
+  //   description: '',
+  //   genres: [],
+  //   id: null,
+  //   in_favorites: null,
+  //   last_change: null,
+  //   names: {
+  //     alternative: '',
+  //     en: '',
+  //     ru: ''
+  //   },
+  //   player: {
+  //     alternative_player: '',
+  //     host: '',
+  //     playlist: null,
+  //     series: {
+  //       first: null,
+  //       last: null,
+  //       string: ''
+  //     }
+  //   },
+  //   posters: {
+  //     medium: {
+  //       raw_base64_file: '',
+  //       url: '',
+  //     },
+  //     original: {
+  //       raw_base64_file: '',
+  //       url: '',
+  //     },
+  //     small: {
+  //       raw_base64_file: '',
+  //       url: '',
+  //     }
+  //   },
+  //   season: {
+  //     code: null,
+  //     string: '',
+  //     week_day: null,
+  //     year: null,
+  //   },
+  //   status: {
+  //     code: null,
+  //     string: ''
+  //   },
+  //   team: {
+  //     decor: [],
+  //     editing: [],
+  //     timing: [],
+  //     translator: [],
+  //     voice: [],
+  //   },
+  //   torrents: {
+  //     list: [],
+  //     series: {
+  //       first: null,
+  //       last: null,
+  //       string: ''
+  //     }
+  //   },
+  //   type: {
+  //     code: null,
+  //     full_string: '',
+  //     length: null,
+  //     series: null,
+  //     string: ''
+  //     }
+  // },
 
   fetchingGetMainPage: false,
   getMainPageError: '',
@@ -209,31 +208,31 @@ export const animeSlice = createSlice({
   },
   extraReducers: {
     
-    [getTitle.pending.type]: (state) => {
-      state.fetchingTitle = true
-    },
-    [getTitle.fulfilled.type]: (state, action: PayloadAction<TitleType>) => {
-      state.fetchingTitle = false
-      state.getTitleError = ''
-      state.title = action.payload
-    },
-    [getTitle.rejected.type]: (state, action: PayloadAction<string>) => {
-      state.fetchingTitle = false
-      state.getTitleError = action.payload
-    },
+    // [getTitle.pending.type]: (state) => {
+    //   state.fetchingTitle = true
+    // },
+    // [getTitle.fulfilled.type]: (state, action: PayloadAction<TitleType>) => {
+    //   state.fetchingTitle = false
+    //   state.getTitleError = ''
+    //   state.title = action.payload
+    // },
+    // [getTitle.rejected.type]: (state, action: PayloadAction<string>) => {
+    //   state.fetchingTitle = false
+    //   state.getTitleError = action.payload
+    // },
 
-    [getRandomAnime.pending.type]: (state) => {
-      state.fetchingRandomAnime = true
-    },
-    [getRandomAnime.fulfilled.type]: (state, action: PayloadAction<TitleType>) => {
-      state.fetchingRandomAnime = false
-      state.getRandomAnimeError = ''
-      state.titleData = action.payload
-    },
-    [getRandomAnime.rejected.type]: (state, action: PayloadAction<string>) => {
-      state.fetchingRandomAnime = false
-      state.getRandomAnimeError = action.payload
-    },
+    // [getRandomAnime.pending.type]: (state) => {
+    //   state.fetchingRandomAnime = true
+    // },
+    // [getRandomAnime.fulfilled.type]: (state, action: PayloadAction<TitleType>) => {
+    //   state.fetchingRandomAnime = false
+    //   state.getRandomAnimeError = ''
+    //   state.titleData = action.payload
+    // },
+    // [getRandomAnime.rejected.type]: (state, action: PayloadAction<string>) => {
+    //   state.fetchingRandomAnime = false
+    //   state.getRandomAnimeError = action.payload
+    // },
 
     [getMainPage.pending.type]: (state) => {
       state.fetchingGetMainPage = true

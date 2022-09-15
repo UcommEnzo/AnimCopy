@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
+import { Modal } from 'antd';
 import './App.scss';
 import Layout from './component/layout';
 import Main from './component/main';
@@ -10,6 +11,17 @@ import Team from './component/team';
 import Login from './component/login';
 import Title from './component/common/title';
 
+
+const modalVpnInfo = () => {
+  Modal.info({
+    title: 'Необходим VPN для загрузки картинок',
+    content: (
+      <>
+      </>
+    ),
+    onOk() {},
+  });
+};
 
 function App() {
   
@@ -24,9 +36,12 @@ function App() {
       };
     }, [url]);
   }
+
+  useEffect(() => {
+    modalVpnInfo()
+  },[])
   
   useScript('https://cdn.plrjs.com/player/dznytyh3bkh3i/faq2j9euwcuh.js');
-
   return (
     <div className='appContainer'>
       <Routes>

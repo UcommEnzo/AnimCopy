@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { getMainPage } from '../../redux/reducers/ActionCreators';
 import MainPageCard from './card';
@@ -8,7 +8,6 @@ const Main = ({}) => {
 
   const dispatch = useAppDispatch()
   const { fetchingGetMainPage, getMainPageError, mainPageData } = useAppSelector(state => state.AnimeReducer)
-
   useEffect(() => {
     dispatch(getMainPage())
   }, [])

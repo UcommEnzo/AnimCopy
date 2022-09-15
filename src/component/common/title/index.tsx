@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
-import ReactPlayer from 'react-player'
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { getRandomAnime, getTitle, getTitleData } from "../../../redux/reducers/ActionCreators";
+import { getTitleData } from "../../../redux/reducers/ActionCreators";
 import './index.scss';
-import { SerieType, TitleType } from "../../../models/ITitlePayload";
+import { TitleType } from "../../../models/ITitlePayload";
 import Torrent from "./torrent";
 import vk from "../../../assets/images/vk.jpg"
 import tg from "../../../assets/images/tg.jpg"
 import discord from "../../../assets/images/discord.jpg"
-import { stat } from "fs";
 import { useLocation, useParams } from "react-router-dom";
-import axios from "axios";
 import { titleDefaultState } from "./constants";
 import Player from "./Player";
 

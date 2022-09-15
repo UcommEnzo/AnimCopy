@@ -10,6 +10,7 @@ type PropsType = {
 }
 
 const TitleCard = ({title, cardType = ''}: PropsType) => {
+
   const {
     announce,
     blocked,
@@ -70,4 +71,4 @@ const TitleCard = ({title, cardType = ''}: PropsType) => {
   )
 }
 
-export default TitleCard
+export default React.memo(TitleCard)
